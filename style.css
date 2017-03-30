@@ -1,0 +1,84 @@
+body {
+    font-family: sans-serif;
+    width: 800px;
+    height: 100%;
+    padding: 0px;
+    margin: auto;
+    background-color: aliceblue;
+}
+
+.nav {
+    position: relative;
+    top: 3px;
+    padding: 15px 10px 15px 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.nav a{
+    position: relative;
+    padding: 0px 10px 0px 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.jumbotron {
+    background-color: cornflowerblue;
+    position: relative;
+    top: 9px;
+    padding: 20px 0px 20px 0px
+}
+
+.jumbotron h1 {
+    text-align: center;
+    color: black;
+    text-shadow: 1px 1px grey;
+}
+
+.main {
+    background-color: white;
+}
+
+.formArea {
+    margin: 5px 0px 5px 0px;
+    text-align: left;
+    width: 270px;
+    float: left;
+    background-color: inherit;
+    border-style: solid;
+    border-width: 2px;
+    border-color: cornflowerblue;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 600px;
+}
+
+.textArea {
+    margin: 5px 0px 5px 0px;
+    margin-left: 10px;
+    text-align: justify;
+    border-width: medium;
+    width: 470px;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: cornflowerblue;
+    background-color: inherit;
+    height: 600px;
+}
+
+.labelBox {
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.labelBox label {}
+
+.labelBox select {
+    width: 50%;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Floodresiliencetool - Your house assessment guide against flooding</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>Flood resilient tool</h1>
+    </div>
+
+    <div class="nav">
+        <a href="Index.html" id="lnkHome">Home</a>
+        <a href="About.html" id="lnkAbout">About</a>
+        <a href="Contact.html" id="lnkContact">Contact</a>
+    </div>
+    <div class="main">
+        <div class="formArea">
+            <p><i> Please select from the following options:</i></p>
+            <div id="divPostcode" class="labelBox">
+                <!--Comments are always nice to remind the reader of the code what's going on-->
+                <label>
+                    Postcode:
+                </label>
+                <select id="ddPostcode">
+                    <option value="0">Please Select</option>
+                    <option value="postcodeA">Bath Postcode A</option>
+                    <option value="postcodeB">Bath Postcode B</option>
+                </select>
+            </div>
+            <div id="divCrawlspace" class="labelBox">
+                <label>
+                    Crawlspace:
+                </label>
+                <select id="ddCrawlspace">
+                    <option value="">Please Select</option>
+                    <option value="yCrawlspace">I have a crawlspace</option>
+                    <option value="nCrawlspace">I don't have a crawlspace</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="textArea" id="divDynamicText">
+            <p>[Placeholder text. If you are seeing this something went wrong.]</p>
+        </div>
+    </div>
+</body>
+<!-- The following line imports a highly useful library of functions called jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+    $("#divDynamicText").load("/TextFiles/introPage.html");
+
+    $("#ddPostcode")
+        .change(function() {
+            switch (this.value) {
+                case "postcodeA":
+                    $("#divDynamicText").load("/TextFiles/postcodeA.html");
+                    break;
+                case "postcodeB":
+                    $("#divDynamicText").load("/TextFiles/postcodeB.html");
+                    break;
+                default:
+                    $("#divDynamicText").load("/TextFiles/introPage.html");
+            }
+        });
+
+</script>
+
+</html>
