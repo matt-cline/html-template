@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    width: 800px;
+    width: 1000px;
     height: 100%;
     padding: 0px;
     margin: auto;
@@ -16,7 +16,7 @@ body {
     margin-top: 10px;
 }
 
-.nav a{
+.nav a {
     position: relative;
     padding: 0px 10px 0px 10px;
     background-color: white;
@@ -44,7 +44,7 @@ body {
 .formArea {
     margin: 5px 0px 5px 0px;
     text-align: left;
-    width: 270px;
+    width: 370px;
     float: left;
     background-color: inherit;
     border-style: solid;
@@ -52,7 +52,7 @@ body {
     border-color: cornflowerblue;
     padding-left: 10px;
     padding-right: 10px;
-    height: 600px;
+    height: 700px;
 }
 
 .textArea {
@@ -60,7 +60,7 @@ body {
     margin-left: 10px;
     text-align: justify;
     border-width: medium;
-    width: 470px;
+    width: 570px;
     float: left;
     padding-left: 10px;
     padding-right: 10px;
@@ -68,7 +68,7 @@ body {
     border-width: 2px;
     border-color: cornflowerblue;
     background-color: inherit;
-    height: 600px;
+    height: 700px;
 }
 
 .labelBox {
@@ -80,5 +80,5 @@ body {
 .labelBox label {}
 
 .labelBox select {
-    width: 50%;
+    width: 40%;
 }
