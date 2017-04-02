@@ -92,3 +92,16 @@ body {
     padding-bottom: 5px;
     text-align: right;
 }
+
+.singleColumn {
+    margin: 5px 0px 5px 0px;
+    padding: 10px;
+    text-align: justify;
+    border-width: medium;
+    width: 980px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: cornflowerblue;
+    background-color: inherit;
+    min-height: 200px;
+}
