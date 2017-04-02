@@ -281,19 +281,21 @@
     $("#dynamicMain").load("/TextFiles/introPage.html");
 
     function textLoad(element) {
+
         $("#dynamicMain").load("/TextFiles/" + element.value + ".html #main");
+
         if ($("#chkSecurity")[0].checked) {
             $("#dynamicSecurity").load("/TextFiles/" + element.value + ".html #security");
         } else {
             $("#dynamicSecurity").empty();
         }
+
         if ($("#chkReturnToNormal")[0].checked) {
             $("#dynamicReturnToNormal").load("/TextFiles/" + element.value + ".html #returnToNormal");
         } else {
             $("#dynamicReturnToNormal").empty();
         }
     }
-
 </script>
 
 </html>
