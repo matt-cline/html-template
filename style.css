@@ -52,7 +52,7 @@ body {
     border-color: cornflowerblue;
     padding-left: 10px;
     padding-right: 10px;
-    height: 700px;
+    min-height: 650px;
 }
 
 .textArea {
@@ -68,7 +68,7 @@ body {
     border-width: 2px;
     border-color: cornflowerblue;
     background-color: inherit;
-    height: 700px;
+    min-height: 650px;
 }
 
 .labelBox {
@@ -77,8 +77,18 @@ body {
     padding-bottom: 5px;
 }
 
-.labelBox label {}
+.labelBox label {
+    max-width: 58%;
+    word-wrap: break-word;
+    display: inline-block;
+}
 
 .labelBox select {
     width: 40%;
+}
+
+.buttonHolder {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: right;
 }
