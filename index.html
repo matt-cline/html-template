@@ -2,225 +2,226 @@
 <html>
 
 <head>
-    <title>Flood Resilience Tool - Your house assessment guide against flooding</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Flood Resilience Tool - Your house assessment guide against flooding</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1>Flood Resilience Tool</h1>
-    </div>
+	<div class="jumbotron">
+		<h1>Flood Resilience Tool</h1>
+	</div>
 
-    <div class="nav">
-        <a href="index.html" id="lnkHome">Home</a>
-        <a href="about.html" id="lnkAbout">About</a>
-        <a href="contact.html" id="lnkContact">Contact</a>
-    </div>
-    <div class="main">
-        <div class="formArea">
-            <p><i> Please select from the following options:</i></p>
-            <div>
-                Required Information:
-                <form>
-                    <label> Vulnerability for security: </label><input type="checkbox" id="chkSecurity">
-                    <label> Return-to-normal: </label><input type="checkbox" id="chkReturnToNormal">
-                </form>
-            </div>
-            <div id="divPostcode" class="labelBox">
-                <label>
-                    Postcode:
+	<div class="nav">
+		<a href="index.html" id="lnkHome">Home</a>
+		<a href="about.html" id="lnkAbout">About</a>
+		<a href="contact.html" id="lnkContact">Contact</a>
+	</div>
+	<div class="main">
+		<div class="formArea">
+			<p><i> Please select from the following options:</i></p>
+			<div>
+				Required Information:
+				<form>
+					<label> Vulnerability for security: </label><input type="checkbox" id="chkSecurity">
+					<label> Return-to-normal: </label><input type="checkbox" id="chkReturnToNormal">
+				</form>
+			</div>
+			<div id="divZones" class="labelBox">
+				<label>
+                    Zone:
                 </label>
-                <select id="ddPostcode" onchange="textLoad(this)">
+				<select id="ddZones" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
-                    <option value="postcodeA">Bath Postcode A</option>
-                    <option value="postcodeB">Bath Postcode B</option>
+                    <option value="zone1">Zone 1</option>
+                    <option value="zone2">Zone 2</option>
+					<option value="zone3">Zone 3</option>
                     <option value="targetTextFile">Test option</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divCrawlspace" class="labelBox">
-                <label>
+			<div id="divCrawlspace" class="labelBox">
+				<label>
                     Crawlspace:
                 </label>
-                <select id="ddCrawlspace" onchange="textLoad(this)">
+				<select id="ddCrawlspace" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
-                    <option value="yCrawlspace">I have a crawlspace</option>
-                    <option value="nCrawlspace">I don't have a crawlspace</option>
+                    <option value="yCrawlspace">Presence of existing wastewater piping</option>
+                    <option value="nCrawlspace">Absence of existing waste water piping</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divElevationWalls" class="labelBox">
-                <label>
+			<div id="divElevationWalls" class="labelBox">
+				<label>
                     Walls in elevations:
                 </label>
-                <select id="ddElevationWalls" onchange="textLoad(this)">
+				<select id="ddElevationWalls" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="yWoodElevationWalls">Presence of wood</option>
                     <option value="nWoodElevationWalls">Absence of wood</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divExteriorCladding" class="labelBox">
-                <label>
+			<div id="divExteriorCladding" class="labelBox">
+				<label>
                     Plaster and exterior cladding:
                 </label>
-                <select id="ddExteriorCladding" onchange="textLoad(this)">
+				<select id="ddExteriorCladding" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="yExteriorInsulation">Exterior insulation</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divIndoorWalls" class="labelBox">
-                <label>
+			<div id="divIndoorWalls" class="labelBox">
+				<label>
                     Indoor wall distribution and lining Partitions:
                 </label>
-                <select id="ddIndoorWalls" onchange="textLoad(this)">
+				<select id="ddIndoorWalls" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="indoorWallsBrickPlasterTiles">Presence only of brick or plaster tiles</option>
 					<option value="indoorWallsAlveolarpanelsPlasterBoardWood">Presence of alveolar panels, plasterboard or wood</option>
 					<option value="indoorWallsInsulation">Insulation present</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divInteriorFinishes" class="labelBox">
-                <label>
-                    Interior finishes and wallcovering:
+			<div id="divInteriorFinishes" class="labelBox">
+				<label>
+                    Interior finishes and wallcoverings:
                 </label>
-                <select id="ddInteriorFinishes" onchange="textLoad(this)">
+				<select id="ddInteriorFinishes" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="interiorFinishesTiles">Presence of tiles</option>
 					<option value="interiorFinishesPasterPaperPaintTextile">Presence of plaster, paper, paint or textile</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divfloorBoard" class="labelBox">
-                <label>
+			<div id="divfloorBoard" class="labelBox">
+				<label>
                     Floorboards:
                 </label>
-                <select id="ddfloorBoard" onchange="textLoad(this)">
+				<select id="ddfloorBoard" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="woodenFloorBoard">Joists and wooden panels</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divflooring" class="labelBox">
-                <label>
+			<div id="divflooring" class="labelBox">
+				<label>
                     Flooring:
                 </label>
-                <select id="ddflooring" onchange="textLoad(this)">
+				<select id="ddflooring" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="gluedLaminatedParquetFlooring">Presence of glued laminated textile or parquet</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divceilings" class="labelBox">
-                <label>
+			<div id="divceilings" class="labelBox">
+				<label>
                     Ceilings:
                 </label>
-                <select id="ddceilings" onchange="textLoad(this)">
+				<select id="ddceilings" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="gluedCeiling">Glued ceiling</option>
 					<option value="suspendedCeiling">Suspended ceilings made of wood, gypsum board or mineral fibreboard</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divinteriorFittings" class="labelBox">
-                <label>
+			<div id="divinteriorFittings" class="labelBox">
+				<label>
                     Interior fittings:
                 </label>
-                <select id="ddinteriorFittings" onchange="textLoad(this)">
+				<select id="ddinteriorFittings" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="woodFittings">Doors and doors of wooden cupboards or alveolar panel</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divinteriorStairs" class="labelBox">
-                <label>
+			<div id="divinteriorStairs" class="labelBox">
+				<label>
                     Interior stairs:
                 </label>
-                <select id="ddinteriorstairs" onchange="textLoad(this)">
+				<select id="ddinteriorstairs" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="solidWoodStairs">Solid wood</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divglazing" class="labelBox">
-                <label>
+			<div id="divglazing" class="labelBox">
+				<label>
                     Glazing and Exterior joinery:
                 </label>
-                <select id="ddglazing" onchange="textLoad(this)">
+				<select id="ddglazing" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="woodExteriorJoinery">Entrance door and wooden sliding doors</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divshuttings" class="labelBox">
-                <label>
+			<div id="divshuttings" class="labelBox">
+				<label>
                     Shuttings:
                 </label>
-                <select id="ddshuttings" onchange="textLoad(this)">
+				<select id="ddshuttings" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="motorisedShuttings">Motorisation</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divgarageDoor" class="labelBox">
-                <label>
+			<div id="divgarageDoor" class="labelBox">
+				<label>
                     Garage doors:
                 </label>
-                <select id="ddgarageDoor" onchange="textLoad(this)">
+				<select id="ddgarageDoor" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="motorisedGarageDoor">Motorisation</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divheatingInstallations" class="labelBox">
-                <label>
+			<div id="divheatingInstallations" class="labelBox">
+				<label>
                     Heating Installations:
                 </label>
-                <select id="ddheatingInstallations" onchange="textLoad(this)">
+				<select id="ddheatingInstallations" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="baseBoiler">Boiler on base or electric convectors</option>
 					<option value="hangedBoiler">Wall-mounted gas boiler</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divhotWaterUnit" class="labelBox">
-                <label>
+			<div id="divhotWaterUnit" class="labelBox">
+				<label>
                     Hot water unit:
                 </label>
-                <select id="ddhotWaterUnit" onchange="textLoad(this)">
+				<select id="ddhotWaterUnit" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="electricWaterHeater">Electric water heater</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divventilation" class="labelBox">
-                <label>
+			<div id="divventilation" class="labelBox">
+				<label>
                     Ventilation:
                 </label>
-                <select id="ddventilation" onchange="textLoad(this)">
+				<select id="ddventilation" onchange="textLoad(this)">
                     <option value="introPage">Please Select</option>
                     <option value="VMC">VMC</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divairConditioner" class="labelBox">
-                <label>
+			<div id="divairConditioner" class="labelBox">
+				<label>
                     Air conditioner:
                 </label>
-                <select id="ddairConditioner" onchange="textLoad(this)">
+				<select id="ddairConditioner" onchange="textLoad(this)">
                     <option value="">Please Select</option>
                     <option value="yAirCon">Air conditioner</option>
 					<option value="ventiloConvecteurs">Ventilo-convecteurs</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divelectricalInstallation" class="labelBox">
-                <label>
+			<div id="divelectricalInstallation" class="labelBox">
+				<label>
                     Electrical Installation:
                 </label>
-                <select id="ddelectricalInstallation" onchange="textLoad(this)">
+				<select id="ddelectricalInstallation" onchange="textLoad(this)">
                     <option value="">Please Select</option>
                     <option value="incomingBox">Incoming box</option>
 					<option value="tableL">Table L</option>
@@ -228,74 +229,75 @@
 					<option value="outlets">Outlets</option>
 					<option value="lightings">Lightings</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divelevator" class="labelBox">
-                <label>
+			<div id="divelevator" class="labelBox">
+				<label>
                     Elevator:
                 </label>
-                <select id="ddelevator" onchange="textLoad(this)">
+				<select id="ddelevator" onchange="textLoad(this)">
                     <option value="">Please Select</option>
                     <option value="undergroundMachinery">Underground Machinery</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divpool" class="labelBox">
-                <label>
+			<div id="divpool" class="labelBox">
+				<label>
                     Pool:
                 </label>
-                <select id="ddpool" onchange="textLoad(this)">
+				<select id="ddpool" onchange="textLoad(this)">
                     <option value="">Please Select</option>
                     <option value="yPool">Presence</option>
                 </select>
-            </div>
+			</div>
 
-            <div id="divhydrocarbonTank" class="labelBox">
-                <label>
+			<div id="divhydrocarbonTank" class="labelBox">
+				<label>
                     Hydrocarbon tank:
                 </label>
-                <select id="ddhydrocarbonTank" onchange="textLoad(this)">
+				<select id="ddhydrocarbonTank" onchange="textLoad(this)">
                     <option value="">Please Select</option>
                     <option value="aerialHydrocarbonTank">Aerial</option>
                 </select>
-            </div>
+			</div>
 
-            <div class="buttonHolder">
-                <button> Generate Report</button>
-            </div>
-        </div>
-        <div class="textArea">
-            <div id="dynamicMain">
-                <p>[Placeholder text. If you are seeing this something went wrong.]</p>
-            </div>
-            <div id="dynamicSecurity">
-            </div>
-            <div id="dynamicReturnToNormal">
-            </div>
-        </div>
-    </div>
+			<div class="buttonHolder">
+				<button> Generate Report</button>
+			</div>
+		</div>
+		<div class="textArea">
+			<div id="dynamicMain">
+				<p>[Placeholder text. If you are seeing this something went wrong.]</p>
+			</div>
+			<div id="dynamicSecurity">
+			</div>
+			<div id="dynamicReturnToNormal">
+			</div>
+		</div>
+	</div>
 </body>
 <!-- The following line imports a highly useful library of functions called jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script>
-    $("#dynamicMain").load("/TextFiles/introPage.html #main");
+	$("#dynamicMain").load("/TextFiles/introPage.html #main");
 
-    function textLoad(element) {
+	function textLoad(element) {
 
-        $("#dynamicMain").load("/TextFiles/" + element.value + ".html #main");
+		$("#dynamicMain").load("/TextFiles/" + element.value + ".html #main");
 
-        if ($("#chkSecurity")[0].checked) {
-            $("#dynamicSecurity").load("/TextFiles/" + element.value + ".html #security");
-        } else {
-            $("#dynamicSecurity").empty();
-        }
+		if ($("#chkSecurity")[0].checked) {
+			$("#dynamicSecurity").load("/TextFiles/" + element.value + ".html #security");
+		} else {
+			$("#dynamicSecurity").empty();
+		}
 
-        if ($("#chkReturnToNormal")[0].checked) {
-            $("#dynamicReturnToNormal").load("/TextFiles/" + element.value + ".html #returnToNormal");
-        } else {
-            $("#dynamicReturnToNormal").empty();
-        }
-    }
+		if ($("#chkReturnToNormal")[0].checked) {
+			$("#dynamicReturnToNormal").load("/TextFiles/" + element.value + ".html #returnToNormal");
+		} else {
+			$("#dynamicReturnToNormal").empty();
+		}
+	}
+
 </script>
 
 </html>
